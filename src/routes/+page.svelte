@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Navbar from '$lib/components/navbar.svelte';
+</script>
+
+<main class="flex w-full flex-col items-center justify-center h-screen gap-10">
+	<h1 class="font-bold text-slate-50">lootboxer</h1>
+    <img alt="Lootbox" src="/lootbox.svg"/>
+	<Navbar></Navbar>
+</main>

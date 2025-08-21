@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+body {
+     font-family: 'Roboto Variable', sans-serif;
+}
+
+h1 {
+    font-family: 'Orbitron Variable';
+    text-transform: uppercase; 
+    font-size: 3rem;
+}
+
+.mint-400 {
+    background-color: #6EE7B7;
+}

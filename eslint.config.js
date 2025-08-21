@@ -33,6 +33,7 @@ export default ts.config(
 				projectService: true,
 				extraFileExtensions: ['.svelte'],
 				parser: ts.parser,
+				tsconfigRootDir: __dirname, 
 				svelteConfig
 			}
 		}

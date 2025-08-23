@@ -1,12 +1,11 @@
 
 <script lang="ts">
-    export let alt: string;
-    export let src: string;
-    export let href: string;
+    let {alt, src, href} = $props();
+ 
 </script>
 
-<a href={href}>
-    <img alt={alt} src={src} class="icon"/>
+<a {href}>
+    <img {alt} {src} class="icon"/>
 </a>
 
 <style>

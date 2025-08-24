@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+
+:root {
+  --mint-400: #6EE7B7;
+}
+
 body {
      font-family: 'Roboto Variable', sans-serif;
 }
@@ -10,5 +15,5 @@ h1 {
 }
 
 .mint-400 {
-    background-color: #6EE7B7;
+  background-color: var(--mint-400);
 }

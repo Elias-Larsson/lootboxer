@@ -10,8 +10,12 @@
 
 <style>
 .icon {
-    height: 40px;
-    width: 40px;
-    position: relative;
+  height: 40px;
+  width: 40px;
+  transition: 0.2s ease; 
+}
+
+.icon:hover { 
+    transform: translateY(-4px);
 }
 </style>    

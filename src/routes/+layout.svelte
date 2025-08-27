@@ -3,7 +3,6 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import '@fontsource-variable/roboto';
 	import '@fontsource-variable/orbitron';
-
 	let { children } = $props();
 </script>
 

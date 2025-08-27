@@ -1,4 +1,8 @@
 <script lang="ts">
+	type Props = {
+		preview?: boolean;
+	}
+	let { preview }: Props = $props();
 </script>
 
 <svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,20 +38,21 @@
 		fill="#615FFF"
 	/>
 </svg>
-
+{#if preview}
 <style>
+	@keyframes openBox {
+		100% { transform: translateY(80px); }
+	}
+
 	@keyframes fallLeft {
-	0% { transform: translate(0px, 0px); visibility: visible; }
 	100% { transform: translate(-200px, 1000px);  visibility: visible; }
 	}
 
 	@keyframes fallRight {
-		0% { transform: translate(0px, 0px); visibility: visible; }
 		100% { transform: translate(200px, 1000px);  visibility: visible; }
 	}	
 
 	@keyframes fallMiddle {
-		0% { transform: translate(0px, 0px); visibility: visible; }
 		100% { transform: translate(0px, 1000px);  visibility: visible; }
 	}
 
@@ -57,22 +62,21 @@
 	svg * {
 		position: absolute;
 		display: flex;
-
+	}
+	.left-lootbox, .middle-lootbox, .right-lootbox {
+		visibility: none;
 	}
 	.left-lootbox {
-		animation: fallLeft 1500ms ease-in;
-		animation-delay: 300ms;
+		animation: fallLeft 1500ms ease-in 500ms forwards;
 	}
 	.middle-lootbox {
-		animation: fallMiddle 1500ms ease-in;
-		animation-delay: 300ms;
-
+		animation: fallMiddle 1500ms ease-in 500ms forwards;
 	}
 	.right-lootbox {
-		animation: fallRight 1500ms ease-in;
-		animation-delay: 300ms;
+		animation: fallRight 1500ms ease-in 500ms forwards;
 	}
-	.bottom-lootbox {
-		position: relative;
+	svg {
+		animation: openBox 1000ms ease-in-out 1000ms forwards;
 	}
 </style>
+{/if}

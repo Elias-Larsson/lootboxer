@@ -36,6 +36,7 @@
 	},
 	"dependencies": {
 		"@fontsource-variable/orbitron": "^5.2.6",
-		"@fontsource-variable/roboto": "^5.2.6"
+		"@fontsource-variable/roboto": "^5.2.6",
+		"motion": "^12.23.12"
 	}
 }

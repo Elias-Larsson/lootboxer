@@ -15,13 +15,13 @@
 </script>
 
 {#if onclick}
-	<button {onclick} class="button">
+	<button {onclick} class="button text-center">
 		<span>
 			{@render children()}
 		</span>
 	</button>
 {:else}
-	<a {href} class="button">
+	<a {href} class="button text-center">
 		<span>
 			{@render children()}
 		</span>

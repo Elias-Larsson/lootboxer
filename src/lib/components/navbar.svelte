@@ -7,7 +7,7 @@
 	}
 	let { href }: Props = $props();
 </script>
-<nav class="bg-slate-700 rounded-2xl" out:fly={{ y: 500 }}>
+<nav class="bg-slate-700 rounded-2xl" out:fly={{ y: 200 }} >
 	<ul class="flex flex-row items-center justify-center px-5 py-4 gap-6">
 		<li>
 			<Icon alt="trade icon" src="/tradeicon.svg" href="/#"/>

@@ -7,7 +7,7 @@
 <main class="flex flex-col justify-center items-center h-screen p-8">
 	<Balance></Balance>
 	<div class="flex w-full flex-col items-center justify-center gap-10">
-		<div class="flex flex-col items-center"in:fly={{ y: 200 }} out:fly={{ y: -200 }}>
+		<div class="flex flex-col items-center gap-10"in:fly={{ y: 200 }} out:fly={{ y: -200 }}>
 			<h1 class="font-bold text-slate-50">lootboxer</h1>
 			<Lootbox/>
 		</div>

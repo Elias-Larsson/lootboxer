@@ -10,7 +10,7 @@
 		<Item name="sword" value={120} rarity="cool" preview={true}/>
 		<Lootbox preview={true}/>
 	</div>
-	<div class="pt-104 absolute" out:fly={{y: 500}}>
+	<div class="pt-104 absolute" out:fly={{y: 200}}>
 		<Button href="/">Claim Item</Button>
 	</div>
 </main>

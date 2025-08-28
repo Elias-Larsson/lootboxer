@@ -10,5 +10,5 @@
 <main class="flex flex-col justify-center items-center h-screen gap-10">
     <Balance/>
     <Profilenavbar />
-    <Item rarity="lol" name="sword" value={2300}></Item>
+    <Item name="sword" value={2300}></Item>
 </main>

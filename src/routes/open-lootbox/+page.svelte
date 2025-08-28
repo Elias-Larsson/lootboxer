@@ -7,7 +7,7 @@
 
 <main class="flex flex-col h-screen items-center justify-around">
 	<div class="flex flex-col items-center" out:fade>
-		<Item name="sword" value={120} rarity="cool" preview={true}/>
+		<Item name="sword" value={120} preview={true}/>
 		<Lootbox preview={true}/>
 	</div>
 	<div class="pt-104 absolute" out:fly={{y: 200}}>

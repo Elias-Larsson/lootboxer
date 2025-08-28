@@ -2,24 +2,23 @@
 	import { scale } from 'svelte/transition';
 
 	type Props = {
-		rarity: string;
 		name: string;
 		value: number;
 		selected?: boolean;
 		preview?: boolean;
 	};
 
-	let { rarity, name, value, preview, selected }: Props = $props();
-
-	let previewProperties = preview ? 'absolute' : '';
-	let selectedProperties = selected ? 'border border-red-500 border-7' : '';
+	let { name, value, preview, selected }: Props = $props();
+	let usePreview = $state(preview);
+	let useSelected = $state(selected);
 </script>
 
 <div
-	class="
-        {previewProperties} flex h-36 w-44 flex-col items-center justify-center rounded-xl bg-slate-700 text-slate-50 {selectedProperties}  {preview
-		? 'popout'
-		: ''}"
+	class={[
+    	{"absolute": usePreview}, 
+		{"border-red-500 border-7": useSelected}, 
+		"flex h-36 w-44 flex-col items-center justify-center rounded-xl bg-slate-700 text-slate-50"
+	]}
 >
 	<p class="text-xl">{name}</p>
 	<div class="flex flex-row">

@@ -37,7 +37,7 @@
 	"dependencies": {
 		"@fontsource-variable/orbitron": "^5.2.6",
 		"@fontsource-variable/roboto": "^5.2.6",
-		"lucide-svelte": "^0.542.0",
+		"@lucide/svelte": "^0.542.0",
 		"motion": "^12.23.12"
 	}
 }

@@ -1,21 +1,17 @@
 
 <script lang="ts">
-    let {alt, src, href} = $props();
- 
+    import { Icon as IconType } from '@lucide/svelte';
+    type Props = {
+        href: string
+        icon: typeof IconType
+    }
+    let { href, icon}: Props = $props();
+    const Icon = icon
 </script>
 
-<a {href}>
-    <img {alt} {src} class="icon"/>
+<a
+  {href}
+  class="h-10 w-10 flex items-center justify-center rounded group"
+>
+  <Icon class="text-slate-300 group-hover:text-green-300 transition ease-in-out " />
 </a>
-
-<style>
-.icon {
-  height: 40px;
-  width: 40px;
-  transition: 0.2s ease; 
-}
-
-.icon:hover { 
-    transform: translateY(-4px);
-}
-</style>    

@@ -22,8 +22,8 @@
 >
 	<p class="text-xl">{name}</p>
 	<div class="flex flex-row">
+		<img src="/coinicon.svg" alt="" />
 		<p class="text-slate-300">{value}</p>
-		<img src="coinicon.svg" alt="coin" />
 	</div>
 </div>
 

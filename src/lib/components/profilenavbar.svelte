@@ -1,21 +1,17 @@
 <script lang="ts">
+	import { Settings, DollarSign, Archive } from '@lucide/svelte';
     import Icon from './iconbutton.svelte';
-	import { fly } from 'svelte/transition';
-	// type Props = {
-	// 	href: string;
-	// }
-	// let { href }: Props = $props();
 </script>
 <nav class="bg-slate-700 rounded-2xl">
 	<ul class="flex flex-row items-center justify-center px-5 py-4 gap-6">
 		<li>
-			<Icon alt="" src="/sell_icon.svg" href="/profile/sell"/>
+			<Icon href="/#" icon={DollarSign}/>
 		</li>
 		<li>
-			<Icon alt="" src="/inventory_icon.svg" href="/profile/inventory"/>
+			<Icon href="/profile" icon={Archive}/>
 		</li>
         <li>
-			<Icon alt="" src="/settings_icon.svg" href="/profile/settings"/>
+			<Icon href="/profile" icon={Settings}/>
 		</li>
 	</ul>
 </nav>

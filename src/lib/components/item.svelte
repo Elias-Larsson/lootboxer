@@ -15,7 +15,7 @@
 
 <div
 	class={[
-    	{"absolute": usePreview}, 
+    	{"absolute popout": usePreview}, 
 		{"border-red-500 border-7": useSelected}, 
 		"flex h-36 w-44 flex-col items-center justify-center rounded-xl bg-slate-700 text-slate-50"
 	]}

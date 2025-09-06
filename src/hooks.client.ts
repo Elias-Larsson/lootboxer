@@ -1,5 +1,3 @@
-import type { Action, Load } from '@sveltejs/kit';
-
 const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL!;
 
 export const login = async (email: string, password: string) => {

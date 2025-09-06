@@ -6,33 +6,6 @@
 	let password: string = $state("");
 	let error = $state("");
   let token = $state("");
-
-	// async function login() {
-	// 	try {
-	// 		const res = await fetch('http://localhost:3001/api/login', {
-	// 			method: 'POST',
-	// 			headers: {
-	// 				'Content-Type': 'application/json'
-	// 			},
-	// 			body: JSON.stringify({ email, password })
-	// 		});
-
-	// 		if (!res.ok) {
-	// 			error = 'login failed';
-	// 			throw new Error('Login failed');
-	// 		}
-
-	// 		const data = await res.json();
-	// 		token = data.accessToken; // backend should send { accessToken: "..." }
-	// 		console.log('Logged in! Token:', token);
-
-	// 		// Save token to localStorage so it persists
-	// 		localStorage.setItem('accessToken', token);
-	// 	} catch (err: unknown) {
-	// 		error = 'server error';
-	// 		console.error('fetch failed:', err);
-	// 	}
-	// }
 </script>
 
 <main class="flex h-screen flex-col items-center justify-center">

@@ -18,8 +18,26 @@ export const login = async (email: string, password: string) => {
 		const token = data.accessToken;
 		console.log('Logged in! Token:', token);
 
-		// Save token to localStorage so it persists
 		localStorage.setItem('accessToken', token);
+	} catch (err: unknown) {
+		console.error('fetch failed:', err);
+	}
+};
+export const register = async (email: string, password: string, name: string) => {
+	try {
+		const res = await fetch(`${VITE_BACKEND_URL}/api/profile`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ email, password, name })
+		});
+		const data = await res.json();
+
+		if (!res.ok) {
+			throw new Error('Login failed', data);
+		}
+        console.log(data)
 	} catch (err: unknown) {
 		console.error('fetch failed:', err);
 	}

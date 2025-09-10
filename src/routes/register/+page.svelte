@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import Inputfield from '$lib/components/inputfield.svelte';
-	import { login, register } from '../../hooks.client';
+	import type { PageProps } from './$types';
+
+	let { form }: PageProps = $props();
 
 	let email: string = $state("");
 	let password: string = $state("");
@@ -10,7 +13,10 @@
 </script>
 
 <main class="flex h-screen flex-col items-center justify-center">
-	<form onsubmit={() => register(email, password, name)} class="flex flex-col gap-8">
+	<form method="POST" use:enhance class="flex flex-col gap-8">
+			{#if form?.missing}
+			<p style="color: red">{error}</p>
+		{/if}
 		<Inputfield
 			type="email"
 			name="email"
@@ -35,7 +41,7 @@
 			bind:value={password}
 			class="outline-none"
 		/>
-		<button type="submit">Login</button>
+		<button>Login</button>
 	</form>
 	{#if error}
 		<p style="color: red">{error}</p>

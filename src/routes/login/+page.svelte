@@ -28,9 +28,6 @@
 		/>
 		<button type="submit">Login</button>
 	</form>
-	{#if error}
-		<p style="color: red">{error}</p>
-	{/if}
 
 	{#if token}
 		<p style="color: green">You are logged in!</p>

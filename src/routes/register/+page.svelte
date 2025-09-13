@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import Button from '$lib/components/button.svelte';
 	import Inputfield from '$lib/components/inputfield.svelte';
 	import type { PageProps } from './$types';
 
@@ -8,15 +9,10 @@
 	let email: string = $state("");
 	let password: string = $state("");
 	let name: string = $state("");
-	let error = $state("");
-  let token = $state("");
 </script>
 
 <main class="flex h-screen flex-col items-center justify-center">
 	<form method="POST" use:enhance class="flex flex-col gap-8">
-			{#if form?.missing}
-			<p style="color: red">{error}</p>
-		{/if}
 		<Inputfield
 			type="email"
 			name="email"
@@ -41,13 +37,11 @@
 			bind:value={password}
 			class="outline-none"
 		/>
-		<button>Login</button>
+		<Button onclick={() => null}>register</Button>
 	</form>
-	{#if error}
-		<p style="color: red">{error}</p>
+	<a href="/login" class="underline text-slate-50 mt-8">Already have an account?</a>
+	{#if form?.error}
+		<p class="bg-red-400 rounded-xl py-4 px-6 mt-12">{form.error}</p>
 	{/if}
 
-	{#if token}
-		<p style="color: green">You are logged in!</p>
-	{/if}
 </main>

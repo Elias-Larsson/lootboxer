@@ -1,15 +1,17 @@
 <script lang="ts">
 	import Inputfield from '$lib/components/inputfield.svelte';
-	import { login } from '../../hooks.client';
+	import { enhance } from '$app/forms';
+	import type { PageProps } from './$types';
+	import Button from '$lib/components/button.svelte';
 
-	let email: string = $state("");
-	let password: string = $state("");
-	let error = $state("");
-  let token = $state("");
+	let { form }: PageProps = $props();
+
+	let email: string = $state('');
+	let password: string = $state('');
 </script>
 
 <main class="flex h-screen flex-col items-center justify-center">
-	<form onsubmit={() => login(email, password)} class="flex flex-col gap-8">
+	<form method="POST" use:enhance class="flex flex-col gap-8">
 		<Inputfield
 			type="email"
 			name="email"
@@ -26,10 +28,11 @@
 			bind:value={password}
 			class="outline-none"
 		/>
-		<button type="submit">Login</button>
+		<Button onclick={() => null}>Login</Button>
+		
 	</form>
-
-	{#if token}
-		<p style="color: green">You are logged in!</p>
+	<a href="/register" class="underline text-slate-50 mt-8">No account?</a>
+	{#if form?.error}
+		<p class="bg-red-400 rounded-xl py-4 px-6 mt-12">{form.error}</p>
 	{/if}
 </main>
